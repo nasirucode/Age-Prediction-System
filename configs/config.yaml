@@ -1,0 +1,37 @@
+---
+DATA:
+  DATA_DIR: "/Users/USER"
+  OUTPUT_DIR: "output"
+HYPERPARAMETERS:
+  OPTIMIZER:
+    NAME: SGD
+    MOMENTUM: 0.9
+    WT_DECAY: 0.0005
+    LR: 0.005
+  EPOCHS: 60
+  LOSS: CROSS_ENTROPY_LOSS
+  BATCH_SIZE: 64
+  PLOT_IMG: True
+DATALOADER:
+  DATASET_NAME: "adience"
+  VALIDATION_SPLIT: 0.1
+GPU:
+  STATUS: True
+  DEVICES: [0]
+  PARALLEL: False
+TEST:
+  IMG_PATH: ""
+  AGE:
+    AGE_PROTO: "age_deploy.prototxt"
+    AGE_CAFFE: "age_net.caffemodel"
+  GENDER:
+    GENDER_PROTO: "gender_deploy.prototxt"
+    GENDER_CAFFE: "gender_net.caffemodel"
+
+
+
+
+
+
+
+
